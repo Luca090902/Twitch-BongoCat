@@ -244,7 +244,7 @@
 
                 thisNote = curChar;
 
-                if (curChar == "^" || curChar == "V")
+                if (curChar == "^" || curChar == "V" || curChar == "W")
                   state = fsmPitch;
                 else
                   state = fsmNote;
@@ -255,7 +255,7 @@
               case fsmPitch: {
                 console.log("fsmPitch");
 
-                if (curChar == "^" || curChar == "V" || curChar == "#")
+                if (curChar == "^" || curChar == "V" || curChar == "W" || curChar == "#")
                   state = fsmError;
                 else {
                   thisNote += curChar;
